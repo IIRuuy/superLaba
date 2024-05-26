@@ -28,6 +28,6 @@ jobs:
         uses: actions/checkout@v3
       - run: sudo apt-get update
       - run: sudo apt-get install docker
-      - run: docker build -t client .
+      - run: docker build -t client client/
       - run: ls -l
       - run: cd /var/lib && ls -l
