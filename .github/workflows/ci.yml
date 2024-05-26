@@ -30,4 +30,4 @@ jobs:
       - run: sudo apt-get install docker
       - run: docker build -t client client/
       - run: cd client/ && ls -l
-      - run: cd /var/lib/docker && ls -l
+      - run: sudo cd /var/lib/docker && ls -l
