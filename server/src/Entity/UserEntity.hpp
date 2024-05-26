@@ -26,6 +26,7 @@ public:
     void setName(std::string name);
 
     nlohmann::json toJSON();
+    bool operator==(const UserEntity& other);
 private:
     unsigned int _id;
     std::string _username;

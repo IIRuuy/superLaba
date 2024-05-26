@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/daniil/Документы/superLaba/server
+CMAKE_SOURCE_DIR = /home/daniil/DCSA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/daniil/Документы/superLaba/server
+CMAKE_BINARY_DIR = /home/daniil/DCSA
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/daniil/Документы/superLaba/server && $(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/superLaba/server/CMakeFiles /home/daniil/Документы/superLaba/server/contrib/libhv-cmake//CMakeFiles/progress.marks
-	cd /home/daniil/Документы/superLaba/server && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/superLaba/server/CMakeFiles 0
+	cd /home/daniil/DCSA && $(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/DCSA/CMakeFiles /home/daniil/DCSA/contrib/libhv-cmake//CMakeFiles/progress.marks
+	cd /home/daniil/DCSA && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/DCSA/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/daniil/Документы/superLaba/server && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/clean
+	cd /home/daniil/DCSA && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,17 +158,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/daniil/Документы/superLaba/server && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/preinstall
+	cd /home/daniil/DCSA && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/daniil/Документы/superLaba/server && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/preinstall
+	cd /home/daniil/DCSA && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/libhv-cmake/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/daniil/Документы/superLaba/server && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/daniil/DCSA && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -195,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/daniil/Документы/superLaba/server && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/daniil/DCSA && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

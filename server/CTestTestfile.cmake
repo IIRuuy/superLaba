@@ -1,8 +1,8 @@
 # CMake generated Testfile for 
-# Source directory: /home/daniil/Документы/superLaba/server
-# Build directory: /home/daniil/Документы/superLaba/server
+# Source directory: /home/daniil/DCSA
+# Build directory: /home/daniil/DCSA
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("contrib")
-subdirs("googletest")
+subdirs("tests/googletest")

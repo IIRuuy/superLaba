@@ -86,3 +86,11 @@ nlohmann::json UserEntity::toJSON() {
     
     return response;
 }
+
+bool UserEntity::operator==(const UserEntity &other) {
+    return  this->_id == other._id
+            && this->_age == other._age
+            && this->_name == other._name
+            && this->_roles == other._roles
+            && this->_username == other._username;
+}

@@ -12,7 +12,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Werror -Wempty-body -Wredundan
 file(GLOB_RECURSE SOURCES
   ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/src/*.hpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h )
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/*.h)
 
 set(SOURCE_DIR_HEADER "")
 execute_process(
@@ -29,7 +29,20 @@ include_directories(${LIBHV_INCLUDE})
 add_executable(${TARGET_NAME} ${SOURCES})
 target_link_libraries(${TARGET_NAME} hv_static)
 
+
+
+list(REMOVE_ITEM SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp)
+list(REMOVE_ITEM SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/HTTPServer.cpp)
+list(REMOVE_ITEM SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/Routers.cpp)
+list(REMOVE_ITEM SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/HTTPServer.hpp)
+list(REMOVE_ITEM SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/Routers.hpp)
+
+
+set(TEST_SOURCES
+  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test_main.cpp
+)
+
 enable_testing()
-add_subdirectory(googletest)
-add_executable(test_app test_main.cpp)
+add_subdirectory(tests/googletest)
+add_executable(test_app ${TEST_SOURCES} ${SOURCES})
 target_link_libraries(test_app gtest_main)

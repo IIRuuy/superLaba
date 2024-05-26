@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/daniil/Документы/superLaba/server
+CMAKE_SOURCE_DIR = /home/daniil/DCSA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/daniil/Документы/superLaba/server
+CMAKE_BINARY_DIR = /home/daniil/DCSA
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/superLaba/server/CMakeFiles /home/daniil/Документы/superLaba/server//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/DCSA/CMakeFiles /home/daniil/DCSA//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/Документы/superLaba/server/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/DCSA/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -233,7 +233,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) $(MAKESILENT) -f googletest/googlemock/CMakeFiles/gmock.dir/build.make googletest/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -246,7 +246,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f googletest/googlemock/CMakeFiles/gmock_main.dir/build.make googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -259,7 +259,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) $(MAKESILENT) -f googletest/googletest/CMakeFiles/gtest.dir/build.make googletest/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -272,7 +272,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f googletest/googletest/CMakeFiles/gtest_main.dir/build.make googletest/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 src/Entity/UserEntity.o: src/Entity/UserEntity.cpp.o
@@ -281,6 +281,7 @@ src/Entity/UserEntity.o: src/Entity/UserEntity.cpp.o
 # target to build an object file
 src/Entity/UserEntity.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Entity/UserEntity.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Entity/UserEntity.cpp.o
 .PHONY : src/Entity/UserEntity.cpp.o
 
 src/Entity/UserEntity.i: src/Entity/UserEntity.cpp.i
@@ -289,6 +290,7 @@ src/Entity/UserEntity.i: src/Entity/UserEntity.cpp.i
 # target to preprocess a source file
 src/Entity/UserEntity.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Entity/UserEntity.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Entity/UserEntity.cpp.i
 .PHONY : src/Entity/UserEntity.cpp.i
 
 src/Entity/UserEntity.s: src/Entity/UserEntity.cpp.s
@@ -297,6 +299,7 @@ src/Entity/UserEntity.s: src/Entity/UserEntity.cpp.s
 # target to generate assembly for a file
 src/Entity/UserEntity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Entity/UserEntity.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Entity/UserEntity.cpp.s
 .PHONY : src/Entity/UserEntity.cpp.s
 
 src/HTTPServer.o: src/HTTPServer.cpp.o
@@ -329,6 +332,7 @@ src/Repository/UserRepository.o: src/Repository/UserRepository.cpp.o
 # target to build an object file
 src/Repository/UserRepository.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Repository/UserRepository.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Repository/UserRepository.cpp.o
 .PHONY : src/Repository/UserRepository.cpp.o
 
 src/Repository/UserRepository.i: src/Repository/UserRepository.cpp.i
@@ -337,6 +341,7 @@ src/Repository/UserRepository.i: src/Repository/UserRepository.cpp.i
 # target to preprocess a source file
 src/Repository/UserRepository.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Repository/UserRepository.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Repository/UserRepository.cpp.i
 .PHONY : src/Repository/UserRepository.cpp.i
 
 src/Repository/UserRepository.s: src/Repository/UserRepository.cpp.s
@@ -345,6 +350,7 @@ src/Repository/UserRepository.s: src/Repository/UserRepository.cpp.s
 # target to generate assembly for a file
 src/Repository/UserRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Repository/UserRepository.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Repository/UserRepository.cpp.s
 .PHONY : src/Repository/UserRepository.cpp.s
 
 src/Routers.o: src/Routers.cpp.o
@@ -377,6 +383,7 @@ src/Service/AuthenticationService.o: src/Service/AuthenticationService.cpp.o
 # target to build an object file
 src/Service/AuthenticationService.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Service/AuthenticationService.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Service/AuthenticationService.cpp.o
 .PHONY : src/Service/AuthenticationService.cpp.o
 
 src/Service/AuthenticationService.i: src/Service/AuthenticationService.cpp.i
@@ -385,6 +392,7 @@ src/Service/AuthenticationService.i: src/Service/AuthenticationService.cpp.i
 # target to preprocess a source file
 src/Service/AuthenticationService.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Service/AuthenticationService.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Service/AuthenticationService.cpp.i
 .PHONY : src/Service/AuthenticationService.cpp.i
 
 src/Service/AuthenticationService.s: src/Service/AuthenticationService.cpp.s
@@ -393,6 +401,7 @@ src/Service/AuthenticationService.s: src/Service/AuthenticationService.cpp.s
 # target to generate assembly for a file
 src/Service/AuthenticationService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Service/AuthenticationService.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Service/AuthenticationService.cpp.s
 .PHONY : src/Service/AuthenticationService.cpp.s
 
 src/Service/UserService.o: src/Service/UserService.cpp.o
@@ -401,6 +410,7 @@ src/Service/UserService.o: src/Service/UserService.cpp.o
 # target to build an object file
 src/Service/UserService.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Service/UserService.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Service/UserService.cpp.o
 .PHONY : src/Service/UserService.cpp.o
 
 src/Service/UserService.i: src/Service/UserService.cpp.i
@@ -409,6 +419,7 @@ src/Service/UserService.i: src/Service/UserService.cpp.i
 # target to preprocess a source file
 src/Service/UserService.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Service/UserService.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Service/UserService.cpp.i
 .PHONY : src/Service/UserService.cpp.i
 
 src/Service/UserService.s: src/Service/UserService.cpp.s
@@ -417,6 +428,7 @@ src/Service/UserService.s: src/Service/UserService.cpp.s
 # target to generate assembly for a file
 src/Service/UserService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Service/UserService.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Service/UserService.cpp.s
 .PHONY : src/Service/UserService.cpp.s
 
 src/Utility/Utility.o: src/Utility/Utility.cpp.o
@@ -425,6 +437,7 @@ src/Utility/Utility.o: src/Utility/Utility.cpp.o
 # target to build an object file
 src/Utility/Utility.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Utility/Utility.cpp.o
 .PHONY : src/Utility/Utility.cpp.o
 
 src/Utility/Utility.i: src/Utility/Utility.cpp.i
@@ -433,6 +446,7 @@ src/Utility/Utility.i: src/Utility/Utility.cpp.i
 # target to preprocess a source file
 src/Utility/Utility.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Utility/Utility.cpp.i
 .PHONY : src/Utility/Utility.cpp.i
 
 src/Utility/Utility.s: src/Utility/Utility.cpp.s
@@ -441,6 +455,7 @@ src/Utility/Utility.s: src/Utility/Utility.cpp.s
 # target to generate assembly for a file
 src/Utility/Utility.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/Utility/Utility.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/Utility/Utility.cpp.s
 .PHONY : src/Utility/Utility.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -467,29 +482,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http-server.dir/build.make CMakeFiles/http-server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-test_main.o: test_main.cpp.o
-.PHONY : test_main.o
+tests/test_main.o: tests/test_main.cpp.o
+.PHONY : tests/test_main.o
 
 # target to build an object file
-test_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/test_main.cpp.o
-.PHONY : test_main.cpp.o
+tests/test_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/tests/test_main.cpp.o
+.PHONY : tests/test_main.cpp.o
 
-test_main.i: test_main.cpp.i
-.PHONY : test_main.i
+tests/test_main.i: tests/test_main.cpp.i
+.PHONY : tests/test_main.i
 
 # target to preprocess a source file
-test_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/test_main.cpp.i
-.PHONY : test_main.cpp.i
+tests/test_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/tests/test_main.cpp.i
+.PHONY : tests/test_main.cpp.i
 
-test_main.s: test_main.cpp.s
-.PHONY : test_main.s
+tests/test_main.s: tests/test_main.cpp.s
+.PHONY : tests/test_main.s
 
 # target to generate assembly for a file
-test_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/test_main.cpp.s
-.PHONY : test_main.cpp.s
+tests/test_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/tests/test_main.cpp.s
+.PHONY : tests/test_main.cpp.s
 
 # Help Target
 help:
@@ -536,9 +551,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... test_main.o"
-	@echo "... test_main.i"
-	@echo "... test_main.s"
+	@echo "... tests/test_main.o"
+	@echo "... tests/test_main.i"
+	@echo "... tests/test_main.s"
 .PHONY : help
 
 

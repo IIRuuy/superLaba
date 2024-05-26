@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../Entity/UserEntity.hpp"
 #include "./UserService.h"
 
