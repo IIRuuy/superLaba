@@ -7,9 +7,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - run: cd server
       - run: sudo apt-get update
       - run: sudo apt-get install g++ make cmake
-      - run: mkdir -p server/build && cd server/build && cmake .. && make
+      - run: mkdir -p build && cd build && cmake .. && make
       - run: cd ..
       - run: sh create_debpkg.sh
       - name: Upload artifact
