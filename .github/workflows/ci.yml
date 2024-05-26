@@ -29,5 +29,5 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install docker
       - run: docker build -t client client/
-      - run: ls -l
-      - run: cd /var/lib && ls -l
+      - run: cd client/ && ls -l
+      - run: cd /var/lib/docker && ls -l
