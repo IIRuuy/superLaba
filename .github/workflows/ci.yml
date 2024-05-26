@@ -10,7 +10,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install g++ make cmake
       - run: mkdir -p server/build && cd server/build && cmake .. && make
-      - run: sh server/create_debpkg.sh
+      - run: cd server && sh create_debpkg.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
