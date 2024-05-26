@@ -29,10 +29,12 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install docker
       - run: docker build -t client client/
-      - name: Save Docker image as tar archive
-        run: docker save client -o client.tar
-      - name: Upload Docker image to artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: client
-          path: client.tar
+      - name: Run Smoke test
+        run: sh client/smoke_test.sh
+      # - name: Save Docker image as tar archive
+      #   run: docker save client -o client.tar
+      # - name: Upload Docker image to artifacts
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: client
+      #     path: client.tar
