@@ -25,7 +25,7 @@ TEST(UserRepositoryTest, CreateUser) {
 
 TEST(UserRepositoryTest, FindByUsername) {
   UserRepository userRepository;
-  ASSERT_TRUE(userRepository.existByUsername("root2"));
+  ASSERT_TRUE(userRepository.existByUsername("root"));
 }
 
 int main(int argc, char **argv)
