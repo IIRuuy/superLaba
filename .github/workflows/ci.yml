@@ -12,6 +12,7 @@ jobs:
       - run: mkdir -p server/build && cd server/build && cmake .. && make
       - run: server/build/test_app
       - run: cd server && sh create_debpkg.sh
+      - run: sudo dpgk -i server/http-server-dcsa.deb && /usr/bin/http-server-dcsa
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
