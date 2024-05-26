@@ -2,7 +2,7 @@ name: CI
 run-name: ${{ github.actor }} run CI
 on: [push]
 jobs:
-  build:
+  buildServer:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -21,3 +21,11 @@ jobs:
         with:
           name: app
           path: server/http-server-dcsa.deb
+  buildClient:
+   runs-on: ubuntu-latest
+   steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: sudo apt-get update
+      - run: echo 123  
+  
