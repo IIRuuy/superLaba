@@ -19,7 +19,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: app
+          name: server
           path: server/http-server-dcsa.deb
   buildClient:
    runs-on: ubuntu-latest
@@ -29,6 +29,10 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install docker
       - run: docker build -t client client/
-      - run: cd client/ && ls -l
-      - run: sudo cd /var/lib && ls -l
-      - run: sudo cd /var/lib/docker && ls -l
+      - name: Save Docker image as tar archive
+        run: docker save client -o client.tar
+      - name: Upload Docker image to artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: client
+          path: client.tar
