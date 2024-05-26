@@ -13,6 +13,8 @@ jobs:
       - run: server/build/test_app
       - run: cd server && sh create_debpkg.sh
       - run: sudo dpkg -i server/http-server-dcsa.deb
+      - run: ls -l server
+      - run: ls -l /usr/bin
       - run: chmod +x server/http-server-dcsa
       - run: server/http-server-dcsa
       - name: Upload artifact
